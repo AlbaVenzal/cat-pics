@@ -1,0 +1,5 @@
+platform :ios, '15.2'
+
+target 'CatPics' do
+  pod 'SwiftLint'
+end

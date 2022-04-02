@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		741D787CBC7A4AA9E7286A9D /* libPods-CatPics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F31551951EBBBA92F3E8FB /* libPods-CatPics.a */; };
 		D633179A27F6047E0044F698 /* CatPicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D633179927F6047E0044F698 /* CatPicsApp.swift */; };
 		D633179C27F6047E0044F698 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D633179B27F6047E0044F698 /* ContentView.swift */; };
 		D633179E27F604800044F698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D633179D27F604800044F698 /* Assets.xcassets */; };
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		699562D1478E60113B415FDE /* Pods-CatPics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPics.release.xcconfig"; path = "Target Support Files/Pods-CatPics/Pods-CatPics.release.xcconfig"; sourceTree = "<group>"; };
+		70C7F0B45DAB0BC491728056 /* Pods-CatPics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPics.debug.xcconfig"; path = "Target Support Files/Pods-CatPics/Pods-CatPics.debug.xcconfig"; sourceTree = "<group>"; };
+		B2F31551951EBBBA92F3E8FB /* libPods-CatPics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatPics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D633179627F6047E0044F698 /* CatPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D633179927F6047E0044F698 /* CatPicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPicsApp.swift; sourceTree = "<group>"; };
 		D633179B27F6047E0044F698 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				741D787CBC7A4AA9E7286A9D /* libPods-CatPics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3321CAF2D4630811502150FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2F31551951EBBBA92F3E8FB /* libPods-CatPics.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D633178D27F6047E0044F698 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,8 @@
 				D63317A927F604800044F698 /* CatPicsTests */,
 				D63317B327F604800044F698 /* CatPicsUITests */,
 				D633179727F6047E0044F698 /* Products */,
+				ED33377904DC0F917F729895 /* Pods */,
+				3321CAF2D4630811502150FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +142,15 @@
 			path = CatPicsUITests;
 			sourceTree = "<group>";
 		};
+		ED33377904DC0F917F729895 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70C7F0B45DAB0BC491728056 /* Pods-CatPics.debug.xcconfig */,
+				699562D1478E60113B415FDE /* Pods-CatPics.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D63317BA27F604800044F698 /* Build configuration list for PBXNativeTarget "CatPics" */;
 			buildPhases = (
+				2CD0B68929F6AF3CD33EA2AF /* [CP] Check Pods Manifest.lock */,
 				D633179227F6047E0044F698 /* Sources */,
 				D633179327F6047E0044F698 /* Frameworks */,
 				D633179427F6047E0044F698 /* Resources */,
+				D627C66727F8625C001223CC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,6 +277,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CD0B68929F6AF3CD33EA2AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatPics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D627C66727F8625C001223CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D633179227F6047E0044F698 /* Sources */ = {
@@ -413,6 +481,7 @@
 		};
 		D63317BB27F604800044F698 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70C7F0B45DAB0BC491728056 /* Pods-CatPics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -424,6 +493,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -435,12 +505,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D63317BC27F604800044F698 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 699562D1478E60113B415FDE /* Pods-CatPics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +523,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -463,7 +535,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
