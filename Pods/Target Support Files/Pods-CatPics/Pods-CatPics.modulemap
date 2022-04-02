@@ -1,0 +1,6 @@
+module Pods_CatPics {
+  umbrella header "Pods-CatPics-umbrella.h"
+
+  export *
+  module * { export * }
+}
