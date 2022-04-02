@@ -10,6 +10,7 @@ import Moya
 
 enum API {
     case getBreeds
+    case getImages(GetImageRequest)
 }
 
 extension API: TargetType {
@@ -21,12 +22,14 @@ extension API: TargetType {
         switch self {
         case .getBreeds:
             return "breeds"
+        case .getImages:
+            return "images/search"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .getBreeds:
+        case .getBreeds, .getImages:
             return .get
         }
     }
@@ -35,6 +38,11 @@ extension API: TargetType {
         switch self {
         case .getBreeds:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case .getImages(let object):
+            var params: [String: Any] = [:]
+            params["limit"] = object.numberOfImages
+            params["breed_id"] = object.breedId
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }
 

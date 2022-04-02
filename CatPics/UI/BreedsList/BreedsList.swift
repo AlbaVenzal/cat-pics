@@ -11,14 +11,22 @@ struct BreedsList: View {
     @ObservedObject private(set) var viewModel: ViewModel
 
     var body: some View {
-        if viewModel.breeds.isEmpty {
-            Text("There are no breeds yet")
-                .onAppear(perform: self.viewModel.reloadBreeds)
-        } else {
-            List(viewModel.breeds) { breed in
-                Text(breed.name)
+        NavigationView {
+            if viewModel.breeds.isEmpty {
+                Text("There are no breeds yet")
+                    .onAppear(perform: self.viewModel.reloadBreeds)
+            } else {
+                List(viewModel.breeds) { breed in
+                    NavigationLink(destination: self.detailsView(breed: breed)) {
+                        Text(breed.name)
+                    }
+                }
             }
         }
+    }
+
+    func detailsView(breed: Breed) -> some View {
+        BreedDetail(viewModel: BreedDetail.ViewModel(breed: breed))
     }
 }
 
