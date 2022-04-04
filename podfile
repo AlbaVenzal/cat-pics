@@ -1,6 +1,19 @@
 platform :ios, '15.2'
 
-target 'CatPics' do
+def shared_pods
   pod 'SwiftLint', '~> 0.44'
   pod 'Moya', '~> 15.0'
+end
+
+target 'CatPics' do
+  shared_pods
+end
+
+target 'CatPicsUITests' do
+  shared_pods
+end
+
+
+target 'CatPicsTests' do 
+  shared_pods
 end

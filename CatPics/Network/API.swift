@@ -50,7 +50,19 @@ extension API: TargetType {
         return ["Content-type": "application/json", "x-api-key": "3589e960-57bd-4760-a86b-9505d1a0d5ec"]
     }
 
-    static var provider = MoyaProvider<API>(plugins: [CachePolicyPlugin()])
+    /// The mocked data to be used, depending on the current route being called.
+    var sampleData: Data {
+        switch self {
+        case .getBreeds:
+            let filePath = Bundle.main.path(forResource: "breeds", ofType: "json")!
+            return FileManager.default.contents(atPath: filePath)!
+        case .getImages:
+            let filePath = Bundle.main.path(forResource: "images", ofType: "json")!
+            return FileManager.default.contents(atPath: filePath)!
+        }
+    }
+
+    static var provider = MoyaProvider<API>(stubClosure: stubClosure, plugins: [CachePolicyPlugin()])
 
     static func request<T: Decodable>(api: API, completion: @escaping (T?, Error?) -> Void) {
         API.provider.request(api) { result in
@@ -73,6 +85,15 @@ extension API: TargetType {
             }
         }
     }
+
+    /// The closure used to determine whether to stub or not, depending on the current configuration.
+    static private let stubClosure: MoyaProvider<API>.StubClosure = {
+        if CommandLine.arguments.contains("--uitesting") {
+            return MoyaProvider.immediatelyStub
+        } else {
+            return MoyaProvider.neverStub
+        }
+    }()
 }
 
 // Add cache to network layer

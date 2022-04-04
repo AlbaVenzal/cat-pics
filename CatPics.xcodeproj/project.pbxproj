@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		067BB7858AC0F06910267551 /* libPods-CatPicsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A1FAB91A53EA38AEA33169 /* libPods-CatPicsTests.a */; };
+		68F82954076A8AAFC9F4B0C3 /* libPods-CatPicsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD99165113F2771F357155DB /* libPods-CatPicsUITests.a */; };
 		741D787CBC7A4AA9E7286A9D /* libPods-CatPics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F31551951EBBBA92F3E8FB /* libPods-CatPics.a */; };
 		D627C66D27F897D2001223CC /* BreedsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D627C66C27F897D2001223CC /* BreedsListViewModel.swift */; };
 		D627C66F27F89825001223CC /* BreedsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D627C66E27F89825001223CC /* BreedsList.swift */; };
@@ -22,6 +24,8 @@
 		D63317B527F604800044F698 /* CatPicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63317B427F604800044F698 /* CatPicsUITests.swift */; };
 		D63317B727F604800044F698 /* CatPicsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63317B627F604800044F698 /* CatPicsUITestsLaunchTests.swift */; };
 		D6529EA127F9C0CB002B67A3 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = D6529EA027F9C0CB002B67A3 /* CachedAsyncImage */; };
+		D6B65A3627FB28A500FF1117 /* breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B65A3527FB28A500FF1117 /* breeds.json */; };
+		D6B65A3827FB28FA00FF1117 /* images.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B65A3727FB28FA00FF1117 /* images.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23C7997B4AE7493EBB2A54CA /* Pods-CatPicsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPicsTests.debug.xcconfig"; path = "Target Support Files/Pods-CatPicsTests/Pods-CatPicsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		400BD190C589D0314DF25301 /* Pods-CatPicsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPicsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatPicsUITests/Pods-CatPicsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		59A1FAB91A53EA38AEA33169 /* libPods-CatPicsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatPicsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC06B62BD91431FAFD651D9 /* Pods-CatPicsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPicsTests.release.xcconfig"; path = "Target Support Files/Pods-CatPicsTests/Pods-CatPicsTests.release.xcconfig"; sourceTree = "<group>"; };
 		699562D1478E60113B415FDE /* Pods-CatPics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPics.release.xcconfig"; path = "Target Support Files/Pods-CatPics/Pods-CatPics.release.xcconfig"; sourceTree = "<group>"; };
 		70C7F0B45DAB0BC491728056 /* Pods-CatPics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPics.debug.xcconfig"; path = "Target Support Files/Pods-CatPics/Pods-CatPics.debug.xcconfig"; sourceTree = "<group>"; };
+		AD99165113F2771F357155DB /* libPods-CatPicsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatPicsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F31551951EBBBA92F3E8FB /* libPods-CatPics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatPics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D627C66C27F897D2001223CC /* BreedsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewModel.swift; sourceTree = "<group>"; };
 		D627C66E27F89825001223CC /* BreedsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsList.swift; sourceTree = "<group>"; };
@@ -61,6 +70,9 @@
 		D63317B027F604800044F698 /* CatPicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatPicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63317B427F604800044F698 /* CatPicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPicsUITests.swift; sourceTree = "<group>"; };
 		D63317B627F604800044F698 /* CatPicsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPicsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6B65A3527FB28A500FF1117 /* breeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breeds.json; sourceTree = "<group>"; };
+		D6B65A3727FB28FA00FF1117 /* images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = images.json; sourceTree = "<group>"; };
+		EC8F60A1DEEFCA61C32C3440 /* Pods-CatPicsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatPicsUITests.release.xcconfig"; path = "Target Support Files/Pods-CatPicsUITests/Pods-CatPicsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				067BB7858AC0F06910267551 /* libPods-CatPicsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F82954076A8AAFC9F4B0C3 /* libPods-CatPicsUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				B2F31551951EBBBA92F3E8FB /* libPods-CatPics.a */,
+				AD99165113F2771F357155DB /* libPods-CatPicsUITests.a */,
+				59A1FAB91A53EA38AEA33169 /* libPods-CatPicsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,6 +143,7 @@
 		D627C67327F89DD4001223CC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D6B65A3427FB286100FF1117 /* Mock */,
 				D627C67427F89EF8001223CC /* API.swift */,
 			);
 			path = Network;
@@ -202,11 +219,24 @@
 			path = CatPicsUITests;
 			sourceTree = "<group>";
 		};
+		D6B65A3427FB286100FF1117 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D6B65A3727FB28FA00FF1117 /* images.json */,
+				D6B65A3527FB28A500FF1117 /* breeds.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		ED33377904DC0F917F729895 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				70C7F0B45DAB0BC491728056 /* Pods-CatPics.debug.xcconfig */,
 				699562D1478E60113B415FDE /* Pods-CatPics.release.xcconfig */,
+				400BD190C589D0314DF25301 /* Pods-CatPicsUITests.debug.xcconfig */,
+				EC8F60A1DEEFCA61C32C3440 /* Pods-CatPicsUITests.release.xcconfig */,
+				23C7997B4AE7493EBB2A54CA /* Pods-CatPicsTests.debug.xcconfig */,
+				5BC06B62BD91431FAFD651D9 /* Pods-CatPicsTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -240,6 +270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D63317BD27F604800044F698 /* Build configuration list for PBXNativeTarget "CatPicsTests" */;
 			buildPhases = (
+				969F6661F459B6D95CE25A9D /* [CP] Check Pods Manifest.lock */,
 				D63317A227F604800044F698 /* Sources */,
 				D63317A327F604800044F698 /* Frameworks */,
 				D63317A427F604800044F698 /* Resources */,
@@ -258,6 +289,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D63317C027F604800044F698 /* Build configuration list for PBXNativeTarget "CatPicsUITests" */;
 			buildPhases = (
+				1C73B04A0FCEDBBDCE3093D2 /* [CP] Check Pods Manifest.lock */,
 				D63317AC27F604800044F698 /* Sources */,
 				D63317AD27F604800044F698 /* Frameworks */,
 				D63317AE27F604800044F698 /* Resources */,
@@ -324,6 +356,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63317A127F604800044F698 /* Preview Assets.xcassets in Resources */,
+				D6B65A3827FB28FA00FF1117 /* images.json in Resources */,
+				D6B65A3627FB28A500FF1117 /* breeds.json in Resources */,
 				D633179E27F604800044F698 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +379,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C73B04A0FCEDBBDCE3093D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatPicsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2CD0B68929F6AF3CD33EA2AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,6 +417,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CatPics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		969F6661F459B6D95CE25A9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatPicsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -613,6 +691,7 @@
 		};
 		D63317BE27F604800044F698 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23C7997B4AE7493EBB2A54CA /* Pods-CatPicsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -632,6 +711,7 @@
 		};
 		D63317BF27F604800044F698 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BC06B62BD91431FAFD651D9 /* Pods-CatPicsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -651,6 +731,7 @@
 		};
 		D63317C127F604800044F698 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 400BD190C589D0314DF25301 /* Pods-CatPicsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -668,6 +749,7 @@
 		};
 		D63317C227F604800044F698 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC8F60A1DEEFCA61C32C3440 /* Pods-CatPicsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
