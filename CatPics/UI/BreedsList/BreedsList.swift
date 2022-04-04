@@ -12,16 +12,24 @@ struct BreedsList: View {
 
     var body: some View {
         NavigationView {
-            if viewModel.breeds.isEmpty {
-                Text("There are no breeds yet")
-                    .onAppear(perform: self.viewModel.reloadBreeds)
-            } else {
-                List(viewModel.breeds) { breed in
-                    NavigationLink(destination: self.detailsView(breed: breed)) {
-                        Text(breed.name)
+            Group {
+                if viewModel.isLoading {
+                    VStack {
+                        ProgressView()
+                        Text("Looking for cat breeds")
+                    }
+                } else if viewModel.breeds.isEmpty {
+                    Text("There are no breeds yet")
+                        .onAppear(perform: self.viewModel.reloadBreeds)
+                } else {
+                    List(viewModel.breeds) { breed in
+                        NavigationLink(destination: self.detailsView(breed: breed)) {
+                            Text(breed.name)
+                        }
                     }
                 }
             }
+            .navigationTitle("Cat breeds")
         }
     }
 

@@ -12,8 +12,10 @@ import SwiftUI
 extension BreedsList {
     class ViewModel: ObservableObject {
         @Published var breeds: [Breed] = []
+        @Published var isLoading: Bool = false
 
         func reloadBreeds() {
+            isLoading = true
             API.request(api: .getBreeds) { [weak self] (response: [Breed]?, error: Error?) in
                 if let breeds = response {
                     self?.breeds = breeds
@@ -21,6 +23,7 @@ extension BreedsList {
                     // TODO handle error
                     print(error)
                 }
+                self?.isLoading = false
             }
         }
     }

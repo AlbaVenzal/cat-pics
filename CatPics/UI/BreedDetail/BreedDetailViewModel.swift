@@ -11,12 +11,14 @@ extension BreedDetail {
     class ViewModel: ObservableObject {
         let breed: Breed
         @Published var images: [CatImage] = []
+        @Published var isLoading: Bool = false
 
         init(breed: Breed) {
             self.breed = breed
         }
 
         func reloadImages() {
+            isLoading = true
             API.request(api: .getImages(GetImageRequest(breedId: breed.id, numberOfImages: 100))) { [weak self] (response: [CatImage]?, error: Error?) in
                 if let images = response {
                     self?.images = images
@@ -24,6 +26,7 @@ extension BreedDetail {
                     // TODO handle error
                     print(error)
                 }
+                self?.isLoading = false
             }
         }
     }
