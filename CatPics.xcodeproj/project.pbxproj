@@ -21,6 +21,7 @@
 		D63317AB27F604800044F698 /* CatPicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63317AA27F604800044F698 /* CatPicsTests.swift */; };
 		D63317B527F604800044F698 /* CatPicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63317B427F604800044F698 /* CatPicsUITests.swift */; };
 		D63317B727F604800044F698 /* CatPicsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63317B627F604800044F698 /* CatPicsUITestsLaunchTests.swift */; };
+		D6529EA127F9C0CB002B67A3 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = D6529EA027F9C0CB002B67A3 /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				741D787CBC7A4AA9E7286A9D /* libPods-CatPics.a in Frameworks */,
+				D6529EA127F9C0CB002B67A3 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +229,9 @@
 			dependencies = (
 			);
 			name = CatPics;
+			packageProductDependencies = (
+				D6529EA027F9C0CB002B67A3 /* CachedAsyncImage */,
+			);
 			productName = CatPics;
 			productReference = D633179627F6047E0044F698 /* CatPics.app */;
 			productType = "com.apple.product-type.application";
@@ -299,6 +304,9 @@
 				Base,
 			);
 			mainGroup = D633178D27F6047E0044F698;
+			packageReferences = (
+				D6529E9F27F9C0CB002B67A3 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = D633179727F6047E0044F698 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -715,6 +723,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6529E9F27F9C0CB002B67A3 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6529EA027F9C0CB002B67A3 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6529E9F27F9C0CB002B67A3 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D633178E27F6047E0044F698 /* Project object */;
 }

@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+// We use CachedAsyncImage because the standard AsyncImage does not have support for cache yet
+import CachedAsyncImage
 
 struct BreedDetail: View {
     @ObservedObject private(set) var viewModel: ViewModel
 
     var body: some View {
         List(viewModel.images) { image in
-            AsyncImage(url: image.url) { phase in
+            CachedAsyncImage(url: image.url, urlCache: URLCache.shared) { phase in
                 if let image = phase.image {
                     // Displays the loaded image.
                     image.resizable()

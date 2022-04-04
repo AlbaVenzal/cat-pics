@@ -50,7 +50,7 @@ extension API: TargetType {
         return ["Content-type": "application/json", "x-api-key": "3589e960-57bd-4760-a86b-9505d1a0d5ec"]
     }
 
-    static var provider = MoyaProvider<API>()
+    static var provider = MoyaProvider<API>(plugins: [CachePolicyPlugin()])
 
     static func request<T: Decodable>(api: API, completion: @escaping (T?, Error?) -> Void) {
         API.provider.request(api) { result in
@@ -72,5 +72,15 @@ extension API: TargetType {
                 completion(nil, error)
             }
         }
+    }
+}
+
+// Add cache to network layer
+final class CachePolicyPlugin: PluginType {
+    public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+        var mutableRequest = request
+        // Force use of cache if available
+        mutableRequest.cachePolicy = .returnCacheDataElseLoad
+        return mutableRequest
     }
 }

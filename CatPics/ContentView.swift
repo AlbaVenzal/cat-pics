@@ -10,6 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         BreedsList(viewModel: BreedsList.ViewModel())
+            .onAppear {
+                // Set URLCache to store 10 MB in memory and 1GB on disk
+                URLCache.shared = URLCache(memoryCapacity: 10*1024*1024,
+                                             diskCapacity: 1*1024*1024*1024)
+            }
     }
 }
 
